@@ -10,7 +10,7 @@ public class MyResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/status")
-    public String getServerStatus() {
-        return Response.status(200).entity("Server Running").build().toString();
+    public Response getServerStatus() {
+        return Response.status(200).entity("Server Running").build();
     }
 }
